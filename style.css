@@ -1,0 +1,161 @@
+/* General Style */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* 
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: var(--cream);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: 100%;
+}
+
+/* Desktop Card */
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: var(--white);
+    width: 550px;
+    border-radius: 7px;
+}
+
+.card .image {
+    width: 50%;
+}
+.card .img-mobile{
+    display: none;
+}
+.card .image .img-desktop {
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.card .text-info {
+    width: 50%;
+    padding: 25px;
+}
+
+.card .text-info .perfume {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1;
+    color: var(--dark-grayish);
+}
+
+.card .text-info h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card .text-info p {
+    color: var(--dark-grayish);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card .text-info h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.card .text-info span.price {
+    text-decoration: line-through;
+    color: var(--dark-grayish);
+}
+
+.card .text-info button {
+    display: block;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.card .text-info button i{
+    margin-right: 8px;
+}
+.card .text-info button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 89%, 11%);
+    
+}
+/* Table: 765px */
+/* @media only screen and (max-width: 765px){
+    .card{
+        width: 450px;
+
+    }
+
+} */
+/* Mobile: 375px */
+@media only screen and (max-width: 375px) {
+    .card {
+        
+        flex-direction: column;
+        width: 100vw;
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+         
+    }
+    .card .image {
+        width: 100%;
+        padding: 20px 15px 0;
+    }
+   .card .image .img-desktop{
+    display: none;
+   } 
+   .card .image .img-mobile{
+    display: block;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+   } 
+   
+    
+    .card .text-info {
+        width: 100%;
+        /* padding: 25px; */
+    }
+}
